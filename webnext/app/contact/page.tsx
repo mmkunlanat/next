@@ -1,11 +1,12 @@
 "use client";
 import { useState } from "react";
+import type { FormEvent } from "react";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [sent, setSent] = useState(false);
 
-  function handleSubmit(e: React.FormEvent) {
+  function handleSubmit(e: FormEvent) {
     e.preventDefault();
     console.log("ข้อมูลที่ส่ง:", form);
     setSent(true);
